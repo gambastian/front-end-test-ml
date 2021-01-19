@@ -20,8 +20,7 @@
   "homepage": "https://github.com/gambastian/front-end-test-ml#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "node-fetch": "^2.6.1",
-    "request": "^2.88.2"
+    "node-fetch": "^2.6.1"
   },
   "devDependencies": {
     "fetch-mock": "^9.11.0",
