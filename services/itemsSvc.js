@@ -24,7 +24,11 @@ class ItemsSvc {
         let url = new URL(constants.BACKEND_HOST + constants.GET_ITEM_RESOURCE + itemId);
 
         let response = await fetch(url);
+
         const item = await response.json();
+        if (response.status !== 200) {
+            return item
+        }
 
         url = new URL(constants.BACKEND_HOST + constants.GET_ITEM_RESOURCE + itemId + constants.GET_ITEM_DESCRIPTION_RESOURCE);
         response = await fetch(url);
@@ -59,7 +63,7 @@ function buildGetItemsResults(response) {
 }
 
 function obtainCategoriesFromResponse(response) {
-    const filters = response.available_filters;
+    let filters = response.filters.length > 0 ? response.filters : response.available_filters;
     const categories = filters.filter(filter => filter.id === "category");
 
     if (categories.length !== 0) {

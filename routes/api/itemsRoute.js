@@ -1,5 +1,5 @@
 const express = require("express");
-const ItemsSvc = require("../../services/itemsSvc")
+const ItemsSvc = require("../../services/itemsSvc");
 
 function itemsApi(app) {
   const router = express.Router();
