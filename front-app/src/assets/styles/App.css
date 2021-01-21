@@ -16,4 +16,6 @@
   top: 66px;
   left: 0;
   right: 0;
+  display: inline-flex;
+  justify-content: center;
 }

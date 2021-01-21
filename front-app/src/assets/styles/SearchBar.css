@@ -12,7 +12,7 @@
 }
 
 .SearchBarLogo {
-    background-image: url("../Logo_ML.png");
+    background-image: url("../images/Logo_ML.png");
     background-repeat: no-repeat;
     position: relative;
     text-indent: -9999px;
@@ -44,7 +44,7 @@
 .SearchBarButton {
     height: 46px;
     width: 40px;
-    background-image: url("../ic_Search.png");
+    background-image: url("../images/ic_Search.png");
     background-repeat: no-repeat;
     position: relative;
     background-color: #eeeeee;

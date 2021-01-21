@@ -1,12 +1,15 @@
 import React from 'react';
+import BreadCrumb from "../components/BreadCrumb";
 
-function Home() {
+function SearchResult() {
+
+    const categories = ["category 1", "category 2"];
 
     return (
-        <div>
-
-        </div>
+        <>
+            <BreadCrumb categories={categories}/>
+        </>
     );
 }
 
-export default Home;
+export default SearchResult;

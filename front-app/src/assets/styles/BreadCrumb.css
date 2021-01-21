@@ -1,0 +1,24 @@
+.BreadCrumbContainer{
+    width: 880px;
+    text-align: left;
+    padding: 0px;
+}
+
+ul.breadcrumb {
+    list-style: none;
+    background-color: #eee;
+    padding-inline-start: 0px;
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 14px;
+    color: #999999;
+}
+
+ul.breadcrumb li + li:before {
+    color: #999999;
+    content: ">";
+    padding-left: 5px;
+    padding-right: 5px;
+}
