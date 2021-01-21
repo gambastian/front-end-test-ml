@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+  background-color: #eeeeee;
+  height: available;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.Container{
+  background-color: #eeeeee;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  top: 66px;
+  left: 0;
+  right: 0;
+}

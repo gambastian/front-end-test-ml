@@ -1,0 +1,59 @@
+.SearchBar{
+    background-color: #ffe600;
+    align-items: center;
+    height: 56px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    justify-content: center;
+    display: inline-flex;
+    flex-direction: row;
+    width: 100%;
+    top: 0px;
+}
+
+.SearchBarLogo {
+    background-image: url("../Logo_ML.png");
+    background-repeat: no-repeat;
+    position: relative;
+    text-indent: -9999px;
+    height: 38px;
+    width: 56px;
+}
+
+.SearchBarInput {
+    position: relative;
+    height: 30px;
+    width: 700px;
+    border: none;
+    padding: 7px 60px 9px 15px;
+    font-size: 18px;
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+    margin-left: 15px;
+}
+
+.SearchBarInput::placeholder {
+    color: #999999;
+    padding-top: 5px;
+}
+
+.SearchBarInput:focus {
+    outline: none;
+}
+
+.SearchBarButton {
+    height: 46px;
+    width: 40px;
+    background-image: url("../ic_Search.png");
+    background-repeat: no-repeat;
+    position: relative;
+    background-color: #eeeeee;
+    background-position: center center;
+    border-width: 0;
+    padding-top: 0px;
+    padding-bottom: 18px;
+}
+
+.SearchBarButton:focus {
+    outline: none;
+}
