@@ -3,7 +3,7 @@ import "../assets/styles/ItemDetail.scss";
 import BreadCrumb from "../components/BreadCrumb";
 import {useParams} from "react-router-dom";
 
-function ItemDetail() {
+function ItemDetail(props) {
 
     const [product, setProduct] = useState({});
     const [categories, setCategories] = useState([]);
@@ -15,14 +15,15 @@ function ItemDetail() {
             try {
                 const resultsData = await fetch(`http://localhost:8000/api/items/${id}`);
                 const resultJson = await resultsData.json();
+
                 setProduct(resultJson.item);
-                setCategories(resultJson.category);
+                setCategories(resultJson.item.category);
             } catch (e) {
                 console.log(`An error happened obtaining the results: ${e}`)
             }
         };
         getItem();
-    }, []);
+    },[useParams]);
 
     return (
         <>

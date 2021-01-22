@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import '../assets/styles/BreadCrumb.scss';
 
 function BreadCrumb(props) {
