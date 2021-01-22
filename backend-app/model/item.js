@@ -12,4 +12,8 @@ Item.prototype.setDescription = function(description) {
     this.description = description
 };
 
+Item.prototype.setCategory = function(category) {
+    this.category = [category]
+};
+
 module.exports = Item;

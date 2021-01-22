@@ -34,12 +34,16 @@ class ItemsSvc {
         response = await fetch(url);
         const description = await response.json();
 
-        return buildItemsResult(item, description)
+        url = new URL(constants.BACKEND_HOST + constants.GET_CATEGORY_NAME_RESOURCE + item.category_id);
+        response = await fetch(url);
+        const category = await response.json();
+
+        return buildItemsResult(item, description, category.name)
     }
 
 }
 
-function buildItemsResult(item, description) {
+function buildItemsResult(item, description, categoryName) {
 
     const decimalsSplit = String(item.price).split('.');
     let mappedItem = new Item(item.id,
@@ -51,8 +55,9 @@ function buildItemsResult(item, description) {
         item.sold_quantity);
 
     mappedItem.setDescription(description.plain_text);
+    mappedItem.setCategory(categoryName);
 
-    return  new ItemResponse(mappedItem);
+    return new ItemResponse(mappedItem);
 }
 
 function buildGetItemsResults(response) {
@@ -63,11 +68,11 @@ function buildGetItemsResults(response) {
 }
 
 function obtainCategoriesFromResponse(response) {
-    let filters = response.filters.length > 0 ? response.filters : response.available_filters;
+    let filters = response.available_filters;
     const categories = filters.filter(filter => filter.id === "category");
 
     if (categories.length !== 0) {
-        return categories[0].values.map(cat => cat.name)
+        return categories[0].values.sort((a, b) => (a.results > b.results) ? -1 : ((b.results > a.results) ? 1 : 0)).map(cat => cat.name)
     }
     return [];
 }
@@ -76,7 +81,7 @@ function obtainItemsFromResponse(response) {
 
     const responseResults = response.results;
     if (response.length !== 0) {
-        return responseResults.map((item) => {
+        return responseResults.slice(0,4).map((item) => {
             const decimalsSplit = String(item.price).split('.');
             return new Item(item.id,
                 item.title,
