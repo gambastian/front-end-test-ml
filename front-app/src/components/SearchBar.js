@@ -1,6 +1,6 @@
 import React from 'react';
 import {useHistory} from "react-router-dom";
-import '../assets/styles/SearchBar.css';
+import '../assets/styles/SearchBar.scss';
 
 function SearchBar(props) {
 

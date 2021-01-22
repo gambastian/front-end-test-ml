@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/styles/BreadCrumb.css';
+import '../assets/styles/BreadCrumb.scss';
 
 function BreadCrumb(props) {
 

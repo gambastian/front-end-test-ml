@@ -3,7 +3,7 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import SearchResult from "../containers/SearchResult"
 import ItemDetail from "../containers/ItemDetail"
 import SearchBar from "../components/SearchBar"
-import '../assets/styles/App.css';
+import '../assets/styles/Apps.scss';
 
 function App() {
     return (

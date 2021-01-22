@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import "../assets/styles/ItemDetail.css";
+import "../assets/styles/ItemDetail.scss";
 import BreadCrumb from "../components/BreadCrumb";
 import {useParams} from "react-router-dom";
 

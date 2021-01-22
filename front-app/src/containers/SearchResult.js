@@ -21,7 +21,7 @@ function SearchResult(props) {
             }
         };
         getResults();
-    }, []);
+    }, [props.location.search]);
 
 
     return (

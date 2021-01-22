@@ -26,14 +26,14 @@
     flex-direction: column;
     text-align: left;
     padding: 32px 0px 32px 32px;
-}
 
-.ItemDetailDescription h2{
-    font-size: 28px;
-}
+    h2{
+        font-size: 28px;
+    }
 
-.ItemDetailDescription p{
-    font-size: 16px;
+    p{
+        font-size: 16px;
+    }
 }
 
 .ItemDetailColumnB{
@@ -41,27 +41,26 @@
     padding-top: 32px;
     padding-right: 32px;
     text-align: left;
-}
 
-.ItemDetailColumnB p{
-    font-size: 14px;
-    padding-bottom: 14px;
-    margin: 0px;
-}
+    p{
+        font-size: 14px;
+        padding-bottom: 14px;
+        margin: 0px;
+    }
 
-.ItemDetailColumnB h1{
-    font-size: 46px;
-    padding-bottom: 32px;
-    margin: 0px;
-}
+    h1{
+        font-size: 46px;
+        padding-bottom: 32px;
+        margin: 0px;
+    }
 
-.ItemDetailColumnB h2{
-    font-size: 24px;
-    padding-bottom: 32px;
-    margin: 0px;
-    overflow-wrap: break-word;
+    h2{
+        font-size: 24px;
+        padding-bottom: 32px;
+        margin: 0px;
+        overflow-wrap: break-word;
+    }
 }
-
 
 .ItemDetailBuyButton {
     font-size: 18px;
