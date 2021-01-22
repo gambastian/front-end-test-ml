@@ -1,28 +1,27 @@
 import React from 'react';
-import {Link, withRouter} from "react-router-dom";
+import {useHistory} from "react-router-dom";
 import '../assets/styles/SearchBar.css';
 
-function SearchBar() {
+function SearchBar(props) {
 
+    let history = useHistory();
     let query = "";
 
     function onChange(e) {
-        query = e.target.value
-        console.log(query)
+        query = e.target.value;
+    }
+
+    function onClick() {
+        history.push(`/items?q=${query}`)
     }
 
     return (
         <header className="SearchBar">
             <a className="SearchBarLogo" href="/">FrontEnd app</a>
-            <form>
-                <input type="text" className="SearchBarInput" placeholder="Nunca dejes de buscar" onChange={onChange}/>
-                <Link to={`/items?q=${query}`}>
-                    <button type="submit" className="SearchBarButton"/>
-                </Link>
-            </form>
+            <input type="text" className="SearchBarInput" placeholder="Nunca dejes de buscar" onChange={onChange}/>
+            <button type="submit" className="SearchBarButton" onClick={onClick}/>
         </header>
     );
 }
 
-
-export default withRouter(SearchBar);
+export default SearchBar;

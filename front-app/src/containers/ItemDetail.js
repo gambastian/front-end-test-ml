@@ -46,4 +46,4 @@ function ItemDetail() {
     )
 }
 
-export default withRouter(ItemDetail);
+export default (ItemDetail);

@@ -9,11 +9,11 @@ function ProductCard(props) {
         product !== undefined &&
         <>
             <div key={product.id} className="ProductCardContainer">
-                <a href="/"><img src={product.picture} className="ProductCardImage" alt=""/></a>
+                <a href={`/items/${product.id}`}><img src={product.picture} className="ProductCardImage" alt=""/></a>
                 <div className="ProductInfo">
                     <div className="ProductPrice">$ {product.price.amount} {product.free_shipping &&
-                    <img src="ic_shipping.png" alt=""/>}</div>
-                    <a href="/" className="ProductDescriptionLink"><p className="ProductDescription">{product.title}</p></a>
+                    <img src={"ic_shipping.png"} alt=""/>}</div>
+                    <a href={`/items/${product.id}`} className="ProductDescriptionLink"><p className="ProductDescription">{product.title}</p></a>
                 </div>
                 <div className="ProductStatus">
                     {product.condition !== undefined && <p>{product.condition === "new" ? "Nuevo" : "Usado"}</p>}

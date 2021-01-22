@@ -1,5 +1,5 @@
 import React from 'react';
-import {useHistory, withRouter, useLocation} from "react-router-dom";
+import { useLocation, withRouter} from "react-router-dom";
 import BreadCrumb from "../components/BreadCrumb";
 import ProductCard from "../components/ProductCard";
 
@@ -9,7 +9,7 @@ function SearchResult(props) {
         return new URLSearchParams(useLocation().search);
     }
     console.log(JSON.stringify(useQuery()));
-    console.log(JSON.stringify(props.location.state));
+    console.log(JSON.stringify(props));
 
     const categories = ["category 1", "category 2"];
     const products = [{
@@ -44,4 +44,4 @@ function SearchResult(props) {
     );
 }
 
-export default withRouter(SearchResult);
+export default (SearchResult);
