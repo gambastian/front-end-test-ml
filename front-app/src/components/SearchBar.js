@@ -15,10 +15,16 @@ function SearchBar(props) {
         history.push(`/items?q=${query}`)
     }
 
+    function _handleKeyDown(e) {
+       if (e.key === 'Enter') {
+           onClick();
+        }
+    }
+
     return (
         <header className="SearchBar">
             <a className="SearchBarLogo" href="/">FrontEnd app</a>
-            <input type="text" className="SearchBarInput" placeholder="Nunca dejes de buscar" onChange={onChange}/>
+            <input type="text" className="SearchBarInput" placeholder="Nunca dejes de buscar" onChange={onChange} onKeyDown={_handleKeyDown}/>
             <button type="submit" className="SearchBarButton" onClick={onClick}/>
         </header>
     );
