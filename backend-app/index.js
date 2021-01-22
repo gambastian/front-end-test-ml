@@ -1,5 +1,4 @@
 const express = require("express");
-const path = require("path");
 const bodyParser = require("body-parser");
 
 const itemsApiRouter = require("./routes/api/itemsRoute")
@@ -9,6 +8,11 @@ const app = express();
 
 // middlewares
 app.use(bodyParser.json());
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
 
 // routes
 itemsApiRouter(app);
