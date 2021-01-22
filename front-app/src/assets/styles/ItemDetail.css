@@ -1,0 +1,78 @@
+.ItemDetailContainer{
+    justify-content: center;
+    display: inline-flex;
+    flex-direction: row;
+    width: 1000px;
+    background-color: white;
+    height: fit-content;
+    padding-bottom: 32px;
+}
+
+.ItemDetailColumnA{
+    width: 680px;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.ItemDetailPicture{
+    max-width: 680px;
+    max-height: 680px;
+    width: 680px;
+    height: 680px;
+}
+
+.ItemDetailDescription{
+    display: inline-flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 32px 0px 32px 32px;
+}
+
+.ItemDetailDescription h2{
+    font-size: 28px;
+}
+
+.ItemDetailDescription p{
+    font-size: 16px;
+}
+
+.ItemDetailColumnB{
+    width: 30%;
+    padding-top: 32px;
+    padding-right: 32px;
+    text-align: left;
+}
+
+.ItemDetailColumnB p{
+    font-size: 14px;
+    padding-bottom: 14px;
+    margin: 0px;
+}
+
+.ItemDetailColumnB h1{
+    font-size: 46px;
+    padding-bottom: 32px;
+    margin: 0px;
+}
+
+.ItemDetailColumnB h2{
+    font-size: 24px;
+    padding-bottom: 32px;
+    margin: 0px;
+}
+
+
+.ItemDetailBuyButton {
+    font-size: 18px;
+    width: 100%;
+    color: white;
+    background-color: #3483fa;
+    margin: 0px;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    display:block;
+    overflow:hidden;
+    border: none;
+}

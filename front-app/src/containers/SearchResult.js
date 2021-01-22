@@ -1,8 +1,15 @@
 import React from 'react';
+import {useHistory, withRouter, useLocation} from "react-router-dom";
 import BreadCrumb from "../components/BreadCrumb";
 import ProductCard from "../components/ProductCard";
 
-function SearchResult() {
+function SearchResult(props) {
+
+    function useQuery() {
+        return new URLSearchParams(useLocation().search);
+    }
+    console.log(JSON.stringify(useQuery()));
+    console.log(JSON.stringify(props.location.state));
 
     const categories = ["category 1", "category 2"];
     const products = [{
@@ -32,9 +39,9 @@ function SearchResult() {
     return (
         <>
             <BreadCrumb categories={categories}/>
-            {products.map(product => <ProductCard product={product}/>)}
+            {products.map(product => <ProductCard key={product.id} product={product}/>)}
         </>
     );
 }
 
-export default SearchResult;
+export default withRouter(SearchResult);

@@ -1,19 +1,19 @@
 import React from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import SearchResult from "../containers/SearchResult"
-import Item from "../containers/Item"
+import ItemDetail from "../containers/ItemDetail"
 import SearchBar from "../components/SearchBar"
 import '../assets/styles/App.css';
 
 function App() {
     return (
         <div className="App">
-            <SearchBar/>
             <div className="Container">
                 <BrowserRouter>
+                    <SearchBar/>
                     <Switch>
-                        <Route path="/items" component={SearchResult}/>
-                        <Route path="/items/:id" component={Item}/>
+                        <Route exact path="/items" component={SearchResult}/>
+                        <Route exact path="/items/:id" component={ItemDetail}/>
                     </Switch>
                 </BrowserRouter>
             </div>
